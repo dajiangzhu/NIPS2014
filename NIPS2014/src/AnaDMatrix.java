@@ -45,13 +45,14 @@ public class AnaDMatrix {
 			tmpLine += stats.getStandardDeviation() + " ";
 			tmpLine += stats.getMean() + " ";
 			tmpLine += stats.getPercentile(50) + " ";
-			tmpLine += (stats.getMean() + stats.getStandardDeviation());
+//			tmpLine += (stats.getMean() + stats.getStandardDeviation());
+			tmpLine += stats.getMax();
 			distributionInfo.add(tmpLine);
 		} // for every subject
 		DicccolUtilIO
 				.writeArrayListToFile(
 						distributionInfo,
-						"/ifs/loni/faculty/thompson/four_d/dzhu/Journal_ESL/logs/errorLimit_Motor_1_68.txt");
+						"/ifs/loni/faculty/thompson/four_d/dzhu/Journal_ESL/logs/errorLimit_Motor_1_68_0921.txt");
 	}
 
 	public double[][] trsposeM(double[][] data, int row, int column) {
